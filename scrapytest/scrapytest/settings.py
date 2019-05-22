@@ -48,9 +48,9 @@ PROXIES = [
 # 取消默认的useragent,使用新的useragent
 DOWNLOADER_MIDDLEWARES = {
     # 'scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware': None,
-    'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware': 110,
+    # 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware': 110,
     'scrapytest.rotate_useragent.RandomUserAgent': 1,
-    'scrapytest.rotate_useragent.ProxyMiddleWare': 200,
+    # 'scrapytest.rotate_useragent.ProxyMiddleWare': 200,
 }
 
 # Obey robots.txt rules
@@ -62,7 +62,7 @@ COOKIES_ENABLED = False
 ITEM_PIPELINES = {
     # 'scrapytest.pipelines.ScrapytestPipeline': 100,
     # 'scrapytest.pipelines.ComicImgDownloadPipeline': 1,
-    # 'scrapytest.pipelines.IpProxyPipeline': 1,
+    'scrapytest.pipelines.IpProxyPipeline': 1,
 }
 
 IMAGES_STORE = '/home/erek/images/woweicangsheng'
